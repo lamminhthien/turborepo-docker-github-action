@@ -1,0 +1,21 @@
+name: Build Docker Image for API
+
+on:
+  push:
+    paths:
+      - 'apps/api/**'
+  pull_request:
+    paths:
+      - 'apps/api/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: |
+        docker build -f ./apps/api/Dockerfile .
