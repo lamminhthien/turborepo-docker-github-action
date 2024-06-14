@@ -57,7 +57,7 @@ export default function Web() {
       )}
       {response && (
         <div>
-          <h3>Greeting</h3>
+          <h3>Greeting 1</h3>
           <p>{response.message}</p>
           <Button onClick={onReset}>Reset</Button>
         </div>
